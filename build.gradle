@@ -79,13 +79,9 @@ repositories {
     mavenCentral()
     maven { url 'https://repo.spongepowered.org/repository/maven-public/' }
     maven { url 'https://jitpack.io' }
-    maven { url "https://repo.essential.gg/repository/maven-public" }
 }
 
 dependencies {
-    provided "gg.essential:loader-launchwrapper:1.1.3"
-    implementation "gg.essential:essential-1.8.9-forge:11092+gecb85a783"
-
     provided("dev.falsehonesty.asmhelper:AsmHelper:1.5.3-$mcVersion") {
         exclude group: "org.jetbrains.kotlin"
     }
@@ -110,7 +106,6 @@ jar {
     manifest.attributes(
         "FMLCorePlugin": "dev.falsehonesty.asmhelper.core.AsmHelperLoadingPlugin",
         "FMLCorePluginContainsFMLMod": "true",
-        "TweakClass": "gg.essential.loader.stage0.EssentialSetupTweaker",
         "FMLAT": "ctjs_at.cfg"
     )
 }
